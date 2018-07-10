@@ -38,9 +38,6 @@ export const printType = (type: RawNode) => {
     case SyntaxKind.StringLiteralType:
       return printers.relationships.namespace(type.text, true);
 
-    case SyntaxKind.LiteralType:
-      return type.value;
-
     case SyntaxKind.BindingElement:
     case SyntaxKind.TypeParameter:
       return type.name.text;
@@ -48,7 +45,8 @@ export const printType = (type: RawNode) => {
     case SyntaxKind.FirstTypeNode:
     case SyntaxKind.LastTypeNode:
     case SyntaxKind.TypePredicate:
-      
+    case SyntaxKind.LiteralType:
+
       if (type.literal) {
         if (type.literal.kind === "StringLiteral") {
           return "'" + type.literal.text + "'";
