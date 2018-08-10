@@ -1,7 +1,7 @@
 {
   "name": "@activepipe/flowgen",
   "description": "Generate flowtype definition files from TypeScript",
-  "version": "1.2.2-ap2",
+  "version": "1.2.2-ap4",
   "bin": {
     "flowgen": "./lib/cli/index.js"
   },
